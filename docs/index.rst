@@ -11,7 +11,6 @@ Welcome to Hash code's documentation!
    :caption: Contents:
 
 
-
 Indices and tables
 ==================
 
