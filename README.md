@@ -16,3 +16,7 @@
 - Tests
 - The documentation (sphynx ?)
 - workflow (automation) on git
+
+## Install the project for dev
+
+- `poetry install --extras docs`
