@@ -12,9 +12,7 @@ class Task:
 class ImplementFeature(Task):
     def __init__(self, engineer: Engineer, feature: Feature, binary: Binary):
 
-        nb_engineer_working_binary = 0
-
-        Task.__init__(self, engineer, feature.difficulty + len(binary.services) + nb_engineer_working_binary)
+        Task.__init__(self, engineer, feature.difficulty + len(binary.services) + len(binary.engineers_working))
         
         self.feature: Feature = feature
         self.binary: Binary = binary
@@ -27,9 +25,12 @@ class MoveService(Task):
         self.binary: Binary = binary
 
 class CreateEmptyBinary(Task):
+
+    nb_of_days = 1
+
     def __init__(self, engineer: Engineer):
-        Task.__init__(self, engineer, 0)
+        Task.__init__(self, engineer, CreateEmptyBinary.nb_of_days)
 
 class Wait(Task):
-    def __init__(self, engineer: Engineer):
-        Task.__init__(self, engineer, 0)
+    def __init__(self, engineer: Engineer, nb_days):
+        Task.__init__(self, engineer, nb_days)
