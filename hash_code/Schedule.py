@@ -18,4 +18,12 @@ class Schedule:
         self.features: list[Feature] = features
 
         CreateEmptyBinary.nb_of_days = nb_days_binary_creation
+    
+    def fit(self):
+        pass
+    
+    def save(self, output_file_name: str):
+        file = open(output_file_name, "w")
+        file.write("Now the file has some content!")
+        file.close()
 
