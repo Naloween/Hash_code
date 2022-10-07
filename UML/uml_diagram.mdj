@@ -290,13 +290,47 @@
 											"height": 13,
 											"text": "+getName(): String",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGDsUlU1DyxIoo=",
+											"_parent": {
+												"$ref": "AAAAAAGDokwN9kF2HOU="
+											},
+											"model": {
+												"$ref": "AAAAAAGDsUlUfDyunFg="
+											},
+											"font": "Arial;13;0",
+											"left": 93,
+											"top": 453,
+											"width": 170.1552734375,
+											"height": 13,
+											"text": "+addService(s: Service)",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGDsUmaXTy6QhU=",
+											"_parent": {
+												"$ref": "AAAAAAGDokwN9kF2HOU="
+											},
+											"model": {
+												"$ref": "AAAAAAGDsUmaRzy36GY="
+											},
+											"font": "Arial;13;0",
+											"left": 93,
+											"top": 468,
+											"width": 170.1552734375,
+											"height": 13,
+											"text": "+removeService(s: Service)",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 88,
 									"top": 373,
 									"width": 180.1552734375,
-									"height": 83
+									"height": 113
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -336,7 +370,7 @@
 							"left": 88,
 							"top": 280,
 							"width": 180.1552734375,
-							"height": 176,
+							"height": 206,
 							"nameCompartment": {
 								"$ref": "AAAAAAGDokwN9UFwnyI="
 							},
@@ -1145,7 +1179,7 @@
 											"top": 188,
 											"width": 148.458984375,
 											"height": 13,
-											"text": "+getTask(): int",
+											"text": "+getTask(): Task",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2119,7 +2153,7 @@
 											"font": "Arial;13;1",
 											"left": 1069,
 											"top": 535,
-											"width": 122.71923828125,
+											"width": 199.3291015625,
 											"height": 13,
 											"text": "Wait"
 										},
@@ -2154,7 +2188,7 @@
 									"font": "Arial;13;0",
 									"left": 1064,
 									"top": 528,
-									"width": 132.71923828125,
+									"width": 209.3291015625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGDol7u/kOeUo0="
@@ -2181,7 +2215,7 @@
 									"font": "Arial;13;0",
 									"left": 1064,
 									"top": 553,
-									"width": 132.71923828125,
+									"width": 209.3291015625,
 									"height": 10
 								},
 								{
@@ -2206,16 +2240,16 @@
 											"font": "Arial;13;0",
 											"left": 1069,
 											"top": 568,
-											"width": 122.71923828125,
+											"width": 199.3291015625,
 											"height": 13,
-											"text": "+Wait(eng: Engineer)",
+											"text": "+Wait(eng: Engineer, nb_days: int)",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1064,
 									"top": 563,
-									"width": 132.71923828125,
+									"width": 209.3291015625,
 									"height": 23
 								},
 								{
@@ -2255,7 +2289,7 @@
 							"containerChangeable": true,
 							"left": 1064,
 							"top": 528,
-							"width": 132.71923828125,
+							"width": 209.3291015625,
 							"height": 73,
 							"nameCompartment": {
 								"$ref": "AAAAAAGDol7u/kOdxbM="
@@ -2666,8 +2700,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 202,
-									"top": 249,
+									"left": 204,
+									"top": 250,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -2687,8 +2721,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 188,
-									"top": 244,
+									"left": 190,
+									"top": 245,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -2708,8 +2742,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 229,
-									"top": 260,
+									"left": 233,
+									"top": 259,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -2727,7 +2761,7 @@
 								"$ref": "AAAAAAGDokwN9EFvjr4="
 							},
 							"lineStyle": 1,
-							"points": "210:279;223:243",
+							"points": "213:279;225:243",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGDom1UNESf9Yg="
@@ -3191,6 +3225,48 @@
 									"direction": "return"
 								}
 							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGDsUlUfDyunFg=",
+							"_parent": {
+								"$ref": "AAAAAAGDokwN8UFthuI="
+							},
+							"name": "addService",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGDsUmZkjy1QS0=",
+									"_parent": {
+										"$ref": "AAAAAAGDsUlUfDyunFg="
+									},
+									"name": "s",
+									"type": {
+										"$ref": "AAAAAAGDok152EGh+oU="
+									}
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGDsUmaRzy36GY=",
+							"_parent": {
+								"$ref": "AAAAAAGDokwN8UFthuI="
+							},
+							"name": "removeService",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGDsUnbNjy+UlM=",
+									"_parent": {
+										"$ref": "AAAAAAGDsUmaRzy36GY="
+									},
+									"name": "s",
+									"type": {
+										"$ref": "AAAAAAGDok152EGh+oU="
+									}
+								}
+							]
 						}
 					]
 				},
@@ -3580,7 +3656,9 @@
 									"_parent": {
 										"$ref": "AAAAAAGDonB7METuays="
 									},
-									"type": "int",
+									"type": {
+										"$ref": "AAAAAAGDolOvA0JRpaU="
+									},
 									"direction": "return"
 								}
 							]
@@ -3927,6 +4005,15 @@
 									"type": {
 										"$ref": "AAAAAAGDolIFzUIc+Zs="
 									}
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGDsVSZQzzBIeY=",
+									"_parent": {
+										"$ref": "AAAAAAGDooAGHUXLQdM="
+									},
+									"name": "nb_days",
+									"type": "int"
 								}
 							]
 						}

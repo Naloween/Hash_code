@@ -1,6 +1,6 @@
 
-from hash_code.Task import Task, ImplementFeature, MoveService, CreateEmptyBinary, Wait
-from hash_code.ObjectsStructure import Engineer, Service, Binary, Feature
+from Task import Task, ImplementFeature, MoveService, CreateEmptyBinary, Wait
+from ObjectsStructure import Engineer, Service, Binary, Feature
 
 class Schedule:
 

@@ -1,5 +1,5 @@
 
-from hash_code.ObjectsStructure import Engineer, Service, Binary, Feature
+from ObjectsStructure import Engineer, Service, Binary, Feature
 
 class Task:
     def __init__(self, engineer: Engineer, nb_of_days: int):
