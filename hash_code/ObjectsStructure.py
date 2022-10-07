@@ -42,6 +42,13 @@ class Binary:
         self.engineers_working.remove(engineer)
 
 class Service:
+
+    def getServiceByName(name: str, services: list):
+        for service in services:
+            if(service.name == name):
+                return service
+        return None
+
     def __init__(self, name: str, binary: Binary):
         self.name: str = name
         self.binary: Binary = binary
