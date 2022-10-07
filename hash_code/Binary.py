@@ -12,6 +12,12 @@ class Binary:
 
         self.services: list[Service] = []
         self.engineers_working: list[Engineer] = []
+
+    def getId(self):
+        return self.id
+    
+    def getServices(self):
+        return self.services
     
     def addService(self, service: Service):
         self.services.append(service)
