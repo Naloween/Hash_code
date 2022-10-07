@@ -50,7 +50,18 @@ class Schedule:
         pass
     
     def save(self, output_file_name: str):
+
+        content = ""
+
+        content += str(len(self.engineers))+"\n"
+
+        for engineer in self.engineers:
+            content += str(len(engineer.tasks))+"\n"
+            for task in engineer.tasks:
+                content += task.toString()+"\n"
+
+
         file = open(output_file_name, "w")
-        file.write("Now the file has some content!")
+        file.write(content)
         file.close()
 
