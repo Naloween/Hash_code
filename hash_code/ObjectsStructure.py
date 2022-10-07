@@ -1,10 +1,16 @@
 
 class Engineer:
     def __init__(self):
-        self.task = None
+        self.tasks : list = []
+
+    def getTasks(self):
+        return self.tasks
     
-    def setTask(self, task):
-        self.task = task
+    def addTask(self, task):
+        self.tasks.append(task)
+
+    def removeTask(self, task):
+        self.tasks.remove(task)
 
 class Binary:
 
