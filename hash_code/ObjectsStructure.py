@@ -16,6 +16,12 @@ class Binary:
 
         self.services = []
         self.engineers_working: list[Engineer] = []
+
+    def getId(self):
+        return self.id
+    
+    def getServices(self):
+        return self.services
     
     def addService(self, service):
         self.services.append(service)
@@ -34,6 +40,12 @@ class Service:
         self.name: str = name
         self.binary: Binary = binary
 
+    def getBinary(self):
+        return self.binary
+    
+    def getName(self):
+        return self.name
+
     def setBinary(self, binary: Binary):
         self.binary = binary
 
@@ -43,6 +55,18 @@ class Feature:
         self.services: list[Service] = []
         self.difficulty: int = difficulty
         self.nb_daily_users: int = nb_daily_users
+
+    def getName(self):
+        return self.name
+    
+    def getServices(self):
+        return self.services
+    
+    def getDifficulty(self):
+        return self.difficulty
+
+    def getDailyUsers(self):
+        return self.nb_daily_users
     
     def addService(self, service: Service):
         self.services.append(service)
