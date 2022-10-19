@@ -21,7 +21,14 @@ class Binary:
         Binary.next_id += 1
 
         self.services = []
-        self.engineers_working: list[Engineer] = []
+        self.engineers_working: list[(Engineer, int, int)] = []
+    
+    def get_nb_engineer_working(self, time: int):
+        res = 0
+        for (engineer, begin, end) in self.engineers_working:
+            if begin <= time and time < end:
+                res += 1
+        return res
 
     def getId(self):
         return self.id
@@ -35,11 +42,8 @@ class Binary:
     def removeService(self, service):
         self.services.remove(service)
     
-    def addEngineer(self, engineer: Engineer):
-        self.engineers_working.append(engineer)
-
-    def removeEngineer(self, engineer: Engineer):
-        self.engineers_working.remove(engineer)
+    def addEngineer(self, engineer: Engineer, begin: int, end: int):
+        self.engineers_working.append((engineer, begin, end))
 
 class Service:
 

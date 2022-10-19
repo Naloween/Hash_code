@@ -89,7 +89,11 @@ def find_solution(schedule: Schedule):
 
         engineer = new_schedule.engineers[0]
         binary = new_schedule.binaries[0]
-        task = ImplementFeature(engineer, feat, binary)
+
+        time = 0
+        if len(engineer.tasks)>0:
+            time = engineer.tasks[-1].time + engineer.tasks[-1].nb_of_days
+        task = ImplementFeature(engineer, time, feat, binary)
         engineer.addTask(task)
 
         new_schedule.end_time += task.nb_of_days

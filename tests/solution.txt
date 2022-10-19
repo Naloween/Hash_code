@@ -1,5 +1,5 @@
 2
 2
-impl foo 0
-impl bar 0
+impl foo 9
+impl bar 9
 0
