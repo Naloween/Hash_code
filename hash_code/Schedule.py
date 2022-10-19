@@ -69,6 +69,16 @@ class Schedule:
     def copy(self):
         return deepcopy(self)
 
+    def getScore(self):
+        score = 0
+        for engineer in self.engineers:
+            time = 0
+            for task in engineer.tasks:
+                time += task.nb_of_days
+                if type(task) == type(ImplementFeature):
+                    score += task.feature.getDailyUsers()*max(0, self.time_limit - time)
+        return score
+
 def find_solution(schedule: Schedule):
 
     scores = np.array([feat.getDailyUsers()/feat.getDifficulty() for feat in schedule.features])
