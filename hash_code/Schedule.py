@@ -70,9 +70,6 @@ class Schedule:
         return deepcopy(self)
 
 def find_solution(schedule: Schedule):
-    # tri features / score = nb_points/time
-    # add feature to list of features to make with optimisation
-    # if work add else don't add and try next feature
 
     scores = np.array([feat.getDailyUsers()/feat.getDifficulty() for feat in schedule.features])
     features = np.array(schedule.features)[np.argsort(-scores)]
