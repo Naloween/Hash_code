@@ -75,7 +75,7 @@ class Schedule:
             time = 0
             for task in engineer.tasks:
                 time += task.nb_of_days
-                if type(task) == type(ImplementFeature):
+                if type(task) is ImplementFeature:
                     score += task.feature.getDailyUsers()*max(0, self.time_limit - time)
         return score
 

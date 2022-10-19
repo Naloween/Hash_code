@@ -38,3 +38,6 @@ def test_find_solution_end_time(solution_schedule):
 
 def test_find_solution_save(solution_schedule):
     solution_schedule.save("tests/solution.txt")
+
+def test_find_solution_score(solution_schedule):
+    assert solution_schedule.getScore() == 820
