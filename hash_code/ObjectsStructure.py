@@ -1,10 +1,16 @@
 
 class Engineer:
     def __init__(self):
-        self.task = None
+        self.tasks : list = []
+
+    def getTasks(self):
+        return self.tasks
     
-    def setTask(self, task):
-        self.task = task
+    def addTask(self, task):
+        self.tasks.append(task)
+
+    def removeTask(self, task):
+        self.tasks.remove(task)
 
 class Binary:
 
@@ -36,6 +42,13 @@ class Binary:
         self.engineers_working.remove(engineer)
 
 class Service:
+
+    def getServiceByName(name: str, services: list):
+        for service in services:
+            if(service.name == name):
+                return service
+        return None
+
     def __init__(self, name: str, binary: Binary):
         self.name: str = name
         self.binary: Binary = binary

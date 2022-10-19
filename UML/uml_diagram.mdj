@@ -1047,6 +1047,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"left": 48,
+											"top": -64,
 											"height": 13
 										},
 										{
@@ -1056,8 +1058,8 @@
 												"$ref": "AAAAAAGDolIFzUIf3Sg="
 											},
 											"font": "Arial;13;1",
-											"left": 733,
-											"top": 127,
+											"left": 757,
+											"top": 95,
 											"width": 148.458984375,
 											"height": 13,
 											"text": "Engineer"
@@ -1070,6 +1072,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"left": 48,
+											"top": -64,
 											"width": 73.67724609375,
 											"height": 13,
 											"text": "(from Model)"
@@ -1082,13 +1086,15 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"left": 48,
+											"top": -64,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 728,
-									"top": 120,
+									"left": 752,
+									"top": 88,
 									"width": 158.458984375,
 									"height": 25,
 									"stereotypeLabel": {
@@ -1124,17 +1130,17 @@
 												"$ref": "AAAAAAGDol+6ZUPH2B8="
 											},
 											"font": "Arial;13;0",
-											"left": 733,
-											"top": 150,
+											"left": 757,
+											"top": 118,
 											"width": 148.458984375,
 											"height": 13,
-											"text": "-task: Task",
+											"text": "-tasks: List<Task>",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 728,
-									"top": 145,
+									"left": 752,
+									"top": 113,
 									"width": 158.458984375,
 									"height": 23
 								},
@@ -1158,11 +1164,11 @@
 												"$ref": "AAAAAAGDom8f/kTj2dI="
 											},
 											"font": "Arial;13;0",
-											"left": 733,
-											"top": 173,
+											"left": 757,
+											"top": 141,
 											"width": 148.458984375,
 											"height": 13,
-											"text": "+Engineer(task: Task)",
+											"text": "+Engineer()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1175,11 +1181,11 @@
 												"$ref": "AAAAAAGDonB7METuays="
 											},
 											"font": "Arial;13;0",
-											"left": 733,
-											"top": 188,
+											"left": 757,
+											"top": 156,
 											"width": 148.458984375,
 											"height": 13,
-											"text": "+getTask(): Task",
+											"text": "+getTasks(): List<Task>",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1193,19 +1199,53 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 733,
-											"top": 203,
+											"left": 781,
+											"top": 139,
 											"width": 148.458984375,
 											"height": 13,
 											"text": "+j()",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGDsWw/e1v+6FI=",
+											"_parent": {
+												"$ref": "AAAAAAGDolIFzkIlOxs="
+											},
+											"model": {
+												"$ref": "AAAAAAGDsWw/QFv7AMM="
+											},
+											"font": "Arial;13;0",
+											"left": 757,
+											"top": 171,
+											"width": 148.458984375,
+											"height": 13,
+											"text": "+addTask(t: Task)",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGDsWydFFwH/Xw=",
+											"_parent": {
+												"$ref": "AAAAAAGDolIFzkIlOxs="
+											},
+											"model": {
+												"$ref": "AAAAAAGDsWyczFwEYgQ="
+											},
+											"font": "Arial;13;0",
+											"left": 757,
+											"top": 186,
+											"width": 148.458984375,
+											"height": 13,
+											"text": "+removeTask(t: Task)",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 728,
-									"top": 168,
+									"left": 752,
+									"top": 136,
 									"width": 158.458984375,
-									"height": 38
+									"height": 68
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -1218,6 +1258,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
+									"left": 24,
+									"top": -32,
 									"width": 10,
 									"height": 10
 								},
@@ -1232,16 +1274,18 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
+									"left": 24,
+									"top": -32,
 									"width": 10,
 									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 728,
-							"top": 120,
+							"left": 752,
+							"top": 88,
 							"width": 158.458984375,
-							"height": 101,
+							"height": 116,
 							"nameCompartment": {
 								"$ref": "AAAAAAGDolIFzUIf3Sg="
 							},
@@ -2888,8 +2932,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 677,
-									"top": 155,
+									"left": 690,
+									"top": 141,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -2909,8 +2953,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 674,
-									"top": 170,
+									"left": 689,
+									"top": 156,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -2930,8 +2974,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 682,
-									"top": 126,
+									"left": 693,
+									"top": 112,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -2949,7 +2993,7 @@
 								"$ref": "AAAAAAGDolIFzUIeLRw="
 							},
 							"lineStyle": 1,
-							"points": "727:156;634:139",
+							"points": "751:138;634:128",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGDom4iTUTE+dY="
@@ -2982,8 +3026,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 739,
-									"top": 235,
+									"left": 747,
+									"top": 226,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -3003,8 +3047,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 748,
-									"top": 247,
+									"left": 757,
+									"top": 237,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -3024,8 +3068,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 720,
-									"top": 212,
+									"left": 728,
+									"top": 203,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -3043,7 +3087,7 @@
 								"$ref": "AAAAAAGDolIFzUIeLRw="
 							},
 							"lineStyle": 1,
-							"points": "742:221;719:239",
+							"points": "759:204;717:239",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGDom5HFUTVxuE="
@@ -3613,11 +3657,9 @@
 							"_parent": {
 								"$ref": "AAAAAAGDolIFzUIc+Zs="
 							},
-							"name": "task",
+							"name": "tasks",
 							"visibility": "private",
-							"type": {
-								"$ref": "AAAAAAGDolOvA0JRpaU="
-							}
+							"type": "List<Task>"
 						}
 					],
 					"operations": [
@@ -3627,20 +3669,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGDolIFzUIc+Zs="
 							},
-							"name": "Engineer",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAGDom9/VETqIKk=",
-									"_parent": {
-										"$ref": "AAAAAAGDom8f/kTj2dI="
-									},
-									"name": "task",
-									"type": {
-										"$ref": "AAAAAAGDolOvA0JRpaU="
-									}
-								}
-							]
+							"name": "Engineer"
 						},
 						{
 							"_type": "UMLOperation",
@@ -3648,7 +3677,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGDolIFzUIc+Zs="
 							},
-							"name": "getTask",
+							"name": "getTasks",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -3656,9 +3685,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGDonB7METuays="
 									},
-									"type": {
-										"$ref": "AAAAAAGDolOvA0JRpaU="
-									},
+									"type": "List<Task>",
 									"direction": "return"
 								}
 							]
@@ -3670,6 +3697,48 @@
 								"$ref": "AAAAAAGDolIFzUIc+Zs="
 							},
 							"name": "j"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGDsWw/QFv7AMM=",
+							"_parent": {
+								"$ref": "AAAAAAGDolIFzUIc+Zs="
+							},
+							"name": "addTask",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGDsWyM0VwC6Zo=",
+									"_parent": {
+										"$ref": "AAAAAAGDsWw/QFv7AMM="
+									},
+									"name": "t",
+									"type": {
+										"$ref": "AAAAAAGDolOvA0JRpaU="
+									}
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGDsWyczFwEYgQ=",
+							"_parent": {
+								"$ref": "AAAAAAGDolIFzUIc+Zs="
+							},
+							"name": "removeTask",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGDsWzH21wL7L4=",
+									"_parent": {
+										"$ref": "AAAAAAGDsWyczFwEYgQ="
+									},
+									"name": "t",
+									"type": {
+										"$ref": "AAAAAAGDolOvA0JRpaU="
+									}
+								}
+							]
 						}
 					]
 				},

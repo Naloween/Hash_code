@@ -16,7 +16,6 @@ def schedule(input_file_name):
 def solution_schedule(schedule):
     return find_solution(schedule)
 
-
 def test_load_schedule_sizes(schedule):
 
     assert schedule.time_limit == 10
