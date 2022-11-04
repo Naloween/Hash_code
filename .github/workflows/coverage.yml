@@ -23,7 +23,6 @@ jobs:
           poetry run pylint --fail-under=0 hash_code
       - name: Pytest # Run pytest
         run: |
-          poetry run pip install numpy
           poetry run coverage run -m pytest
           poetry run coverage report
 
