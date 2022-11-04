@@ -20,7 +20,7 @@ jobs:
         run: poetry install
       - name: Pylint # Run pylint static analysis
         run: |
-          poetry run pylint poetry_tutorial
+          poetry run pylint hash_code
       - name: Pytest # Run pytest
         run: |
           poetry run coverage run -m pytest

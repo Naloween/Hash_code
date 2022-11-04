@@ -1,4 +1,5 @@
 # Hash_code
+![coverage badge](./coverage.svg)
 
 ## What is it ?
 
