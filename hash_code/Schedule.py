@@ -87,16 +87,26 @@ def find_solution(schedule: Schedule):
     def add_feat(feat: Feature) -> Schedule:
         new_schedule: Schedule = schedule.copy()
 
-        engineer = new_schedule.engineers[0]
-        binary = new_schedule.binaries[0]
+        binaries = []
+        for service in feat.getServices():
+            if not(service.binary in binaries):
+                binaries.append(service.binary)
 
-        time = 0
-        if len(engineer.tasks)>0:
-            time = engineer.tasks[-1].time + engineer.tasks[-1].nb_of_days
-        task = ImplementFeature(engineer, time, feat, binary)
-        engineer.addTask(task)
+        for k in range(len(binaries)):
+            i = k
+            while i >= len(schedule.engineers):
+                i -= len(schedule.engineers)
 
-        new_schedule.end_time += task.nb_of_days
+            binary = binaries[k]
+            engineer = schedule.engineers[i]
+            
+            time = 0
+            if len(engineer.tasks)>0:
+                time = engineer.tasks[-1].time + engineer.tasks[-1].nb_of_days
+            task = ImplementFeature(engineer, time, feat, binary)
+            engineer.addTask(task)
+
+            new_schedule.end_time += task.nb_of_days
 
         return new_schedule
     
