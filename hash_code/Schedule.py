@@ -92,8 +92,9 @@ def find_solution(schedule: Schedule):
 
         binaries = []
         for service in feat.getServices():
-            if not(service.binary in binaries):
-                binaries.append(service.binary)
+            if not service is None:
+                if not(service.binary in binaries):
+                    binaries.append(service.binary)
 
         for k in range(len(binaries)):
             i = k
@@ -121,5 +122,3 @@ def find_solution(schedule: Schedule):
             schedule = new_schedule
     
     return schedule
-
-find_solution(Schedule.load("tests/input_data_test.txt"))
