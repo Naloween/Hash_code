@@ -89,8 +89,9 @@ def find_solution(schedule: Schedule):
 
         binaries = []
         for service in feat.getServices():
-            if not(service.binary in binaries):
-                binaries.append(service.binary)
+            if not service is None:
+                if not(service.binary in binaries):
+                    binaries.append(service.binary)
 
         for k in range(len(binaries)):
             i = k
