@@ -51,6 +51,7 @@ class Service:
         for service in services:
             if(service.name == name):
                 return service
+        print("service name not found")
         return None
 
     def __init__(self, name: str, binary: Binary):

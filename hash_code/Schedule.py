@@ -32,8 +32,11 @@ class Schedule:
             features[k].nb_daily_users = int(line[3])
 
             line = file.readline().split(" ")
+            line[-1] = line[-1].strip()
             for i in range(nb_services_implemented):
                 features[k].addService(Service.getServiceByName(line[i], services))
+                
+            
         
         return Schedule(time_limit, engineers, services, binaries, features, nb_days_binary_creation)
 
@@ -99,14 +102,16 @@ def find_solution(schedule: Schedule):
 
             binary = binaries[k]
             engineer = schedule.engineers[i]
-            
+
             time = 0
             if len(engineer.tasks)>0:
                 time = engineer.tasks[-1].time + engineer.tasks[-1].nb_of_days
             task = ImplementFeature(engineer, time, feat, binary)
             engineer.addTask(task)
 
-            new_schedule.end_time += task.nb_of_days
+        max_times = [ engineer.tasks[-1].time + engineer.tasks[-1].nb_of_days if len(engineer.tasks) > 0 else 0 for engineer in schedule.engineers]
+        print(max_times)
+        new_schedule.end_time = max(max_times)
 
         return new_schedule
     
@@ -116,3 +121,5 @@ def find_solution(schedule: Schedule):
             schedule = new_schedule
     
     return schedule
+
+find_solution(Schedule.load("tests/input_data_test.txt"))

@@ -1,5 +1,3 @@
 2
-2
-impl foo 9
-impl bar 9
+0
 0
