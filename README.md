@@ -5,7 +5,7 @@
 
 An object-oriented approach
 
-./UML/uml_image.svg
+!(./UML/uml_image.svg)
 
 ## How to use ?
 
