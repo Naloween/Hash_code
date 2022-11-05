@@ -3,6 +3,10 @@
 
 ## What is it ?
 
+An object-oriented approach
+
+![](./UML/uml_image.svg)
+
 ## How to use ?
 
 ## The team
